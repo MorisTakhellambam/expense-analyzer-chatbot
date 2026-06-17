@@ -21,9 +21,9 @@ def create_embeddings() -> None:
     
     # Create embeddings for the 'text' column
     embeddings = model.encode(
-        df["text"].tolist(),
+        df["text"].tolist(),        # ChromaDB expects plain lists, not tensors
         batch_size=64,
-        show_progress_bar=True       # ChromaDB expects plain lists, not tensors
+        show_progress_bar=True 
     )
 
     chroma = chromadb.PersistentClient(path="./data/expense_vector_db")
