@@ -17,7 +17,7 @@ def clean_data() -> pd.DataFrame:
     """
 
     # Read the raw data
-    df = pd.read_csv(RAW_DATA_PATH, usecols=['date', 'category', 'amount', 'description'])
+    df = pd.read_csv(RAW_DATA_PATH, usecols=['date', 'category', 'amount', 'currency', 'description'])
     
     # Remove negative sign and commas from amount column
     df['amount'] = df['amount'].astype(str).str.replace('-', '', regex=False)
