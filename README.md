@@ -30,7 +30,7 @@ The project uses Retrieval-Augmented Generation (RAG) by converting expense tran
 - Store embeddings in ChromaDB
 - Retrieve relevant transactions using semantic similarity
 - AI chatbot powered by Groq LLM
-- Tool-based agent architecture using LangChain
+- Tool-based agent architecture using LangChain and LangGraph
 
 ---
 
@@ -216,7 +216,6 @@ src/tools.py
 
 ```
 expense-analyzer/
-
 │
 ├── data/
 │
@@ -227,14 +226,15 @@ expense-analyzer/
 │   ├── chunking.py
 │   ├── embedding.py
 │   ├── retriever.py
+│   ├── test_retriever.py
 │   ├── tools.py
 │   ├── prompts.py
-│   ├── agent.py
-│   └── main.py
+│   └── agent.py
 │
 ├── plan.png
-├── requirements.txt
+├── plan.svg
 ├── .env
+├── requirements.txt
 └── README.md
 ```
 
